@@ -369,7 +369,7 @@ function cubesviewerViewCubeDimensionFilter () {
 		// If all values are selected, the filter is empty and therefore removed by selectCut
 		if (checked.size() < $(view.container).find(".cv-view-dimensionfilter-list").find("input").size()) {
 			$(view.container).find(".cv-view-dimensionfilter-list").find("input:checked").each(function (idx, e) {
-				filterValues.push( $(e).attr("value") );
+				filterValues.push( cubes._escape_path_part($(e).attr("value")) );
 			});
 		}
 		
