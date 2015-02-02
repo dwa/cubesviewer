@@ -339,7 +339,7 @@ function cubesviewerViewCubeDimensionFilter () {
 		if (filterValues.length > 0) {
 			$(view.container).find(".cv-view-dimensionfilter-list").find("input").each (function (idx, e) {
 				for (var i = 0; i < filterValues.length; i++) {
-					if ($(e).attr("value") == filterValues[i]) {
+					if ($(e).attr("value") == cubes._unescape_path_part(filterValues[i])) {
 						$(e).attr("checked", "checked");
 					}
 				}
